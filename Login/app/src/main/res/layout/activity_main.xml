@@ -11,29 +11,4 @@
     tools:context="com.example.satoryuji.login.MainActivity">
 
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="名前を入力してください"
-        android:ems="10"
-        android:layout_marginTop="165dp"
-        android:id="@+id/editText"
-        android:layout_marginLeft="52dp"
-        android:layout_marginStart="52dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="進む"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
-        android:layout_marginLeft="59dp"
-        android:layout_marginStart="59dp"
-        android:layout_marginTop="102dp"
-        android:id="@+id/button" />
 </RelativeLayout>
