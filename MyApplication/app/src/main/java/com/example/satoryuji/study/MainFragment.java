@@ -25,7 +25,7 @@ public class MainFragment extends Fragment{
                 FragmentTransaction transaction = manager.beginTransaction();
 
                 // 普通は引数は画面で入力されたメッセージをいれるのかな？
-                transaction.replace(R.id.container, NextFragment.newInstance("myName"));
+                transaction.replace(R.id.text, NextFragment.newInstance("myName"));
 
                 transaction.commit();
             }

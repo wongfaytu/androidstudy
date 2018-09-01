@@ -7,11 +7,19 @@
         android:text="next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="77dp"
+        android:id="@+id/button"
+        android:layout_below="@+id/text"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="名前を入力してください"
+        android:ems="10"
+        android:layout_marginTop="89dp"
+        android:id="@+id/text"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="131dp"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="107dp"
-        android:id="@+id/button" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
