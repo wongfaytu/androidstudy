@@ -10,22 +10,5 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.satoryuji.study.MainActivity">
 
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/button" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_above="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="72dp"
-        android:id="@+id/editText"
-        tools:text="名前を入力してください" />
 </RelativeLayout>
