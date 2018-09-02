@@ -7,13 +7,18 @@ import android.support.v4.app.Fragment;
 
 public class NextFragment extends Fragment {
 
-    private static final String ARGS_NAME = "name";
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
 
-    public static NextFragment newInstance(String name) {
+        super.onCreate(savedInstanceState);
+
+        private static final int ARGS_NAME = R.id.text;
+
+    public static NextFragment newInstance(int name) {
         NextFragment fragment = new NextFragment();
 
         Bundle args = new Bundle();
-        args.putString(ARGS_NAME, name);
+        args.putInt(String.valueOf(ARGS_NAME), name);
         fragment.setArguments(args);
 
         return fragment;
@@ -25,7 +30,8 @@ public class NextFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Bundle args = getArguments();
-        mName = args.getString(ARGS_NAME);
+        mName = args.getString(String.valueOf(ARGS_NAME));
     }
 }
+
 

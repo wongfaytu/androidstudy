@@ -10,11 +10,10 @@ public class MainActivity extends AppCompatActivity { 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.container);
         MainFragment fragment = new MainFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.activity_main, fragment);
         transaction.commit();
-
     }
 }
