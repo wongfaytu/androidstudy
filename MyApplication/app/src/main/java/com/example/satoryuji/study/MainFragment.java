@@ -7,10 +7,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
-
-public class MainFragment extends Fragment{
+public class MainFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -18,6 +18,7 @@ public class MainFragment extends Fragment{
 
         View root = inflater.inflate(R.layout.fragment_main, container, false);
         View button = root.findViewById(R.id.button);
+        final TextView textview = (TextView) root.findViewById(R.id.text);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -25,12 +26,17 @@ public class MainFragment extends Fragment{
                 FragmentTransaction transaction = manager.beginTransaction();
 
                 // 普通は引数は画面で入力されたメッセージをいれるのかな？
-                transaction.replace(R.id.text, NextFragment.newInstance(R.id.text));
+                transaction.replace(R.id.container, NextFragment.newInstance(textview.getText().toString()));
 
                 transaction.commit();
             }
         });
         return root;
+
     }
 
+    @Override
+    public void onClick(View v) {
+
+    }
 }
