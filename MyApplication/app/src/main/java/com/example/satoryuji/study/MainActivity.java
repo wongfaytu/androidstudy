@@ -37,28 +37,31 @@ public class MainActivity extends AppCompatActivity {
             mContext = context;
             mItemList = itemList;
         }
-    }
 
-    @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        final View view = LayoutInflater.from(mContext).inflate(R.layout.item, parent, false);
-        return new ViewHolder(view);
-    }
-    @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        final TextView textItem = (TextView) holder.itemView.findViewById(R.id.item_name);
-        textItem.setText(mItemList.get(position));
-    }
-    @Override
-    public int getItemCount() {
-        return mItemList.size();
-    }
+        @Override
+        public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            final View view = LayoutInflater.from(mContext).inflate(R.layout.item, parent, false);
+            return new ViewHolder(view);
+        }
 
-    private static class ViewHolder extends RecyclerView.ViewHolder {
-        private final TextView mTextView;
-        private ViewHolder(View v) {
-            super(v);
-            mTextView = (TextView) v.findViewById(R.id.item_name);
+        @Override
+        public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+            final TextView textItem = (TextView) holder.itemView.findViewById(R.id.item_name);
+            textItem.setText(mItemList.get(position).toString());
+        }
+
+        @Override
+        public int getItemCount() {
+            return mItemList.size();
+        }
+
+        private static class ViewHolder extends RecyclerView.ViewHolder {
+            private final TextView mTextView;
+
+            private ViewHolder(View v) {
+                super(v);
+                mTextView = (TextView) v.findViewById(R.id.item_name);
+            }
         }
     }
 }
