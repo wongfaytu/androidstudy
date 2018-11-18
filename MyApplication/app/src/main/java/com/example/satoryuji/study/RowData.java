@@ -1,7 +1,5 @@
 package com.example.satoryuji.study;
 
-import android.widget.ImageView;
-
 /**
  * Created by satoryuji on 2018/11/17.
  */
@@ -17,13 +15,13 @@ public class RowData {
         return title;
     }
 
-    private ImageView imageView;
-
-    public void setImageView(ImageView imageView){
-        this.imageView = imageView;
-    }
-
-    public ImageView getImageView() {
-        return imageView;
-    }
+//    private ImageView imageView;
+//
+//    public void setImageView(ImageView imageView){
+//        this.imageView = imageView;
+//    }
+//
+//    public ImageView getImageView() {
+//        return imageView;
+//    }
 }
