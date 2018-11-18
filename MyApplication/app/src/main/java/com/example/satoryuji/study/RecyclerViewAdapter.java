@@ -1,6 +1,5 @@
 package com.example.satoryuji.study;
 
-import android.media.Image;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +28,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position){
         holder.titleView.setText(list.get(position).getTitle());
-        holder.imageView.setImageResource(Integer(list.get(position));
+        holder.imageView.setImageResource(R.drawable.apple);
 
     }
 

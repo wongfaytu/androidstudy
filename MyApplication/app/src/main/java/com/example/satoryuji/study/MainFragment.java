@@ -2,6 +2,8 @@ package com.example.satoryuji.study;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -19,16 +21,19 @@ public class MainFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        RecyclerView rv = (RecyclerView) findViewById(R.id.RecyclerView);
+        View root = inflater.inflate(R.layout.fragment_main, container, false);
+        RecyclerView rv = (RecyclerView) root.findViewById(R.id.RecyclerView);
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(this.createDataset());
 
-        LinearLayoutManager llm = new LinearLayoutManager(this);
+        LinearLayoutManager llm = new LinearLayoutManager();
 
         rv.setHasFixedSize(true);
 
         rv.setLayoutManager(llm);
 
         rv.setAdapter(adapter);
+
+        return root;
     }
     private List<RowData> createDataset() {
 
