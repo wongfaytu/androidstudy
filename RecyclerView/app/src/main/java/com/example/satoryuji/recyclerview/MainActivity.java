@@ -1,24 +1,19 @@
-package com.example.satoryuji.study;
+package com.example.satoryuji.recyclerview;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by satoryuji on 2018/10/27.
- */
+public class MainActivity extends AppCompatActivity {
 
-public class MainFragment extends Fragment{
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        super.onCreateView(inflater, container, savedInstanceState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         RecyclerView rv = (RecyclerView) findViewById(R.id.RecyclerView);
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(this.createDataset());
 
@@ -30,12 +25,14 @@ public class MainFragment extends Fragment{
 
         rv.setAdapter(adapter);
     }
+
     private List<RowData> createDataset() {
 
         List<RowData> dataset = new ArrayList<>();
         for (int i = 0; i < 50; i++) {
             RowData data = new RowData();
-            data.setTitle("りんごが" + i + "個目");
+            data.setTitle("カサレアル　太郎" + i + "号");
+            data.setDetail("カサレアル　太郎は" + i + "個の唐揚げが好き");
 
             dataset.add(data);
         }
